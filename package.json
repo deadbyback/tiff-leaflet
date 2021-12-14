@@ -1,0 +1,23 @@
+{
+  "name": "tiff-leaflet",
+  "version": "0.1.0",
+  "description": "Library for visualization of a tiff file by means of a Leaflet map",
+  "main": "./dist/leaflet-geotiff",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deadbyback/tiff-leaflet.git"
+  },
+  "keywords": [
+    "GeoTiff",
+    "Leaflet"
+  ],
+  "author": "https://github.com/deadbyback",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/deadbyback/tiff-leaflet/issues"
+  },
+  "homepage": "https://github.com/deadbyback/tiff-leaflet#readme"
+}
