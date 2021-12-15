@@ -1,11 +1,10 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
 
 <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
-<!-- <script src="https://unpkg.com/leaflet@0.7.7/dist/leaflet.js"></script> -->
-<script src="vendor/geotiff.js"></script>
-<script src="vendor/plotty.js"></script>
 
-<script src="leaflet-geotiff.js"></script>
+<script src="../vendor/geotiff.js"></script>
+<script src="../vendor/plotty.js"></script>
+<script src="../dist/leaflet-geotiff.js"></script>
 
 <div>
     <div style="width:15%;float:left;">
@@ -24,7 +23,7 @@
             Min <img id="colorScaleImage" src="" style="vertical-align: middle; height:20px; width:200px;" /> Max </p>
         </div>
         <div>
-            The value of the element at a given point- <span id="pointValue">?</span></p>
+            The value of the element at a given point - <span id="pointValue">?</span></p>
         </div>
     </div>
     <div id="mapid" style="width:85%; height:100%;float:left;"></div>
@@ -52,17 +51,12 @@
             [153.57144, -28.2468339915],
             [153.477409376, -28.1570717509999]
         ]; */
-    /*     var clipMask = [
-            [50.833375453949, 28.015145435929],
-            [50.821, 28.015402927994],
-            [50.820, 28.026947155594],
-            [50.833375453949, 28.015145435929]
-        ]; */
+    /*Flipped coordinates*/
     var clipMask = [
-        [28.015145435929, 50.833375453949],
-        [28.015402927994, 50.821],
-        [28.026947155594, 50.820],
-        [28.015145435929, 50.833375453949]
+        [50.833375453949, 28.015145435929],
+        [50.821, 28.015402927994],
+        [50.820, 28.026947155594],
+        [50.833375453949, 28.015145435929]
     ];
     for (var i = 0; i < clipMask.length; i++) {
         var tmp = clipMask[i][0];
@@ -86,7 +80,7 @@
     }).addTo(mymap);
 
     var someProperty = L.leafletGeotiff(
-        url = 'tif/cartogram_60_205.tif',
+        url = '../tif/tif_example.tif',
         options = {
             band: 0,
             displayMin: 5,
